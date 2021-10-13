@@ -20,8 +20,7 @@ class CreateTableUser extends Migration
             $table->timestamps();
 
             
-            // $table->integer('id_histori_posyandu')->unsigned();
-            // $table->foreign('id_histori_posyandu')->references('id')->on('table_histori_posyandu');
+           
         });
 
         Schema::table('table_user', function (Blueprint $table) {
