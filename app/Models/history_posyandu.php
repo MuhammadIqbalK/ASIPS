@@ -14,6 +14,6 @@ class history_posyandu extends Model
     }
 
     public function user(){
-        return $this->hasMany(user_table::class, 'id_histori_posyandu', 'id');
+        return $this->hasMany(user::class, 'id_histori_posyandu', 'id');
     }
 }

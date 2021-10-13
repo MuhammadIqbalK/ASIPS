@@ -10,7 +10,7 @@ class user_role extends Model
     protected $table = 'user_role';
 
     public function user(){
-        return $this->belongsTo(user_table::class, 'id', 'id_user');
+        return $this->belongsTo(user::class, 'id', 'id_user');
     }
 
     public function role(){
