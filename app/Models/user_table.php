@@ -9,8 +9,11 @@ class user_table extends Model
 {
     protected $table = 'user_table';
 
-    public function user_table()
-    {
-        return $this->hasMany(user_table::class,'id_user_table','id');
+    public function histori_posyandu(){
+        return $this->belongsTo(histori_posyandu::class, 'id', 'id_histori_posyandu');
+    }
+
+    public function user_role(){
+        return $this->hasMany(user_role::class, 'id_user', 'id');
     }
 }

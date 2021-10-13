@@ -9,8 +9,11 @@ class history_posyandu extends Model
 {
     protected $table = 'history_posyandu';
 
-    public function history_posyandu()
-    {
-        return $this->hasMany(history_posyandu::class,'id_history_posyandu','id');
+    public function balita(){
+        return $this->belongsTo(balita::class, 'id', 'id_histori_posyandu');
+    }
+
+    public function user(){
+        return $this->hasMany(user_table::class, 'id_histori_posyandu', 'id');
     }
 }

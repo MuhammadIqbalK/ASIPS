@@ -9,8 +9,11 @@ class user_role extends Model
 {
     protected $table = 'user_role';
 
-    public function user_role()
-    {
-        return $this->hasMany(user_role::class,'id_user_role','id');
+    public function user(){
+        return $this->belongsTo(user_table::class, 'id', 'id_user');
+    }
+
+    public function role(){
+        return $this->belongsTo(role::class, 'id', 'id_role');
     }
 }

@@ -11,6 +11,10 @@ class balita extends Model
 
     public function balita()
     {
-        return $this->hasMany(balita::class,'id_balita','id');
+        return $this->belongsTo(posyandu::class,'id_posyandu','id');
+    }
+
+    public function history_posyandu(){
+        return $this->hasMany(history_posyandu::class, 'id_history_posyandu', 'id');
     }
 }

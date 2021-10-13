@@ -9,8 +9,11 @@ class kelurahan extends Model
 {
     protected $table = 'kelurahan';
 
-    public function kelurahan()
-    {
-        return $this->hasMany(Kelurahan::class,'id_kelurahan','id');
+    public function kecamatan(){
+        return $this->belongsTo(kecamatan::class, 'id', 'id_kelurahan');
+    }
+
+    public function posyandu(){
+        return $this->hasMany(posyandu::class, 'id_kelurahan', 'id');
     }
 }

@@ -9,8 +9,11 @@ class posyandu extends Model
 {
     protected $table = 'posyandu';
 
-    public function posyandu()
-    {
-        return $this->hasMany(posyandu::class,'id_posyandu','id');
+    public function kelurahan(){
+        return $this->belongsTo(kelurahan::class, 'id', 'id_kelurahan');
+    }
+
+    public function balita(){
+        return $this->hasMany(balita::class, 'id_posyandu', 'id');
     }
 }

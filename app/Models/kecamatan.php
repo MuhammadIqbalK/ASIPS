@@ -9,9 +9,8 @@ class kecamatan extends Model
 {
     protected $table = 'kecamatan';
 
-    public function kecamatan()
-    {
-        return $this->hasMany(Kecamatan::class,'id_kecamatan','id');
+    public function kelurahan(){
+        return $this->hasMany(kelurahan::class, 'id_kelurahan', 'id');
     }
 
 }
