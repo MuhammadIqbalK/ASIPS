@@ -9,7 +9,8 @@ class balitaController extends Controller
 {
     public function index()
     {
-        //
+        $a = balita::all();
+        return view('balita.balita',['a'=>$a]);
     }
 
     /**
@@ -73,8 +74,10 @@ class balitaController extends Controller
      * @param  \App\Models\table_balita  $table_balita
      * @return \Illuminate\Http\Response
      */
-    public function destroy(balita $table_balita)
+    public function destroy($id)
     {
-        //
+        $a = balita::find($id);
+        $a->delete();
+        return redirect('balita');
     }
 }

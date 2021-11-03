@@ -15,15 +15,15 @@ class UserSeeder extends Seeder
     public function run()
     {
         User::create([
-            'name' => '',
+            'name' => 'ss',
             'email' => '-2020@vokasi.unair.ac.id',
-            'password' => ''
+            'password' => 's'
         ]);
 
         User::create([
-            'name' => '',
+            'name' => 'a',
             'email' => '-2020@vokasi.unair.ac.id',
-            'password' => ''
+            'password' => 'b'
         ]);
     }
 }

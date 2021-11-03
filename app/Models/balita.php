@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class balita extends Model
 {
-    protected $table = 'balita';
+    protected $table = 'table_balita';
 
     public function balita()
     {

@@ -14,13 +14,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('login');
+    return view('Home');
 
     
 });
 
+route::get('/balita','App\Http\Controllers\balitaController@index');
+route::get('/destroybalita/{id}','App\Http\Controllers\balitaController@destroy');
 // Route::get('/Home', function () {
 //     return view('Home');
 
     
 // });
+
