@@ -1,44 +1,158 @@
-<div class="login-box">
-  <div class="lb-header">
-    <a href="#" class="active" id="login-box-link">Login</a>
-    <a href="#" id="signup-box-link">Sign Up</a>
-  </div>
-  <div class="social-login">
-    <a href="#">
-      <i class="fa fa-facebook fa-lg"></i>
-      Login in with facebook
-    </a>
-    <a href="#">
-      <i class="fa fa-google-plus fa-lg"></i>
-      log in with Google
-    </a>
-  </div>
-  <form class="email-login">
-    <div class="u-form-group">
-      <input type="email" placeholder="Email"/>
+<div class="form">
+
+  <ul class="tab-group">
+    <li class="tab active"><a href="#signup">Sign Up</a></li>
+    <li class="tab"><a href="#login">Log In</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="signup">
+      <h1>Sign Up for Free</h1>
+
+      <form action="/" method="post">
+
+        <div class="top-row">
+          <div class="field-wrap">
+            <label>
+              First Name<span class="req">*</span>
+            </label>
+            <input type="text" required autocomplete="off" />
+          </div>
+
+          <div class="field-wrap">
+            <label>
+              Last Name<span class="req">*</span>
+            </label>
+            <input type="text" required autocomplete="off" />
+          </div>
+        </div>
+
+        <div class="field-wrap">
+          <label>
+            Email Address<span class="req">*</span>
+          </label>
+          <input type="email" required autocomplete="off" />
+        </div>
+
+        <div class="field-wrap">
+          <label>
+            Set A Password<span class="req">*</span>
+          </label>
+          <input type="password" required autocomplete="off" />
+        </div>
+
+        <button type="submit" class="button button-block" />Get Started</button>
+
+      </form>
+
     </div>
-    <div class="u-form-group">
-      <input type="password" placeholder="Password"/>
+
+    <div id="login">
+      <h1>Welcome Back!</h1>
+
+      <form action="/" method="post">
+
+        <div class="field-wrap">
+          <label>
+            Email Address<span class="req">*</span>
+          </label>
+          <input type="email" required autocomplete="off" />
+        </div>
+
+        <div class="field-wrap">
+          <label>
+            Password<span class="req">*</span>
+          </label>
+          <input type="password" required autocomplete="off" />
+        </div>
+
+        <p class="forgot"><a href="#">Forgot Password?</a></p>
+
+        <button class="button button-block" />Log In</button>
+
+      </form>
+
     </div>
-    <div class="u-form-group">
-      <button>Log in</button>
+
+  </div><!-- tab-content -->
+
+</div> <!-- /form -->
+<div class="form">
+
+  <ul class="tab-group">
+    <li class="tab active"><a href="#signup">Sign Up</a></li>
+    <li class="tab"><a href="#login">Log In</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="signup">
+      <h1>Sign Up for Free</h1>
+
+      <form action="/" method="post">
+
+        <div class="top-row">
+          <div class="field-wrap">
+            <label>
+              First Name<span class="req">*</span>
+            </label>
+            <input type="text" required autocomplete="off" />
+          </div>
+
+          <div class="field-wrap">
+            <label>
+              Last Name<span class="req">*</span>
+            </label>
+            <input type="text" required autocomplete="off" />
+          </div>
+        </div>
+
+        <div class="field-wrap">
+          <label>
+            Email Address<span class="req">*</span>
+          </label>
+          <input type="email" required autocomplete="off" />
+        </div>
+
+        <div class="field-wrap">
+          <label>
+            Set A Password<span class="req">*</span>
+          </label>
+          <input type="password" required autocomplete="off" />
+        </div>
+
+        <button type="submit" class="button button-block" />Get Started</button>
+
+      </form>
+
     </div>
-    <div class="u-form-group">
-      <a href="#" class="forgot-password">Forgot password?</a>
+
+    <div id="login">
+      <h1>Welcome Back!</h1>
+
+      <form action="/" method="post">
+
+        <div class="field-wrap">
+          <label>
+            Email Address<span class="req">*</span>
+          </label>
+          <input type="email" required autocomplete="off" />
+        </div>
+
+        <div class="field-wrap">
+          <label>
+            Password<span class="req">*</span>
+          </label>
+          <input type="password" required autocomplete="off" />
+        </div>
+
+        <p class="forgot"><a href="#">Forgot Password?</a></p>
+
+        <button class="button button-block" />Log In</button>
+
+      </form>
+
     </div>
-  </form>
-  <form class="email-signup">
-    <div class="u-form-group">
-      <input type="email" placeholder="Email"/>
-    </div>
-    <div class="u-form-group">
-      <input type="password" placeholder="Password"/>
-    </div>
-    <div class="u-form-group">
-      <input type="password" placeholder="Confirm Password"/>
-    </div>
-    <div class="u-form-group">
-      <button>Sign Up</button>
-    </div>
-  </form>
-</div>
+
+  </div><!-- tab-content -->
+
+</div> <!-- /form -->
