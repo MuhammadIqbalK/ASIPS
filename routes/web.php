@@ -18,12 +18,17 @@ Route::get('/', function () {
 
     
 });
-
+//tablebalita
 route::get('/balita','App\Http\Controllers\balitaController@index');
 route::get('/destroybalita/{id}','App\Http\Controllers\balitaController@destroy');
-// Route::get('/Home', function () {
-//     return view('Home');
+
+//tablekecamatan
+route::get('/kecamatan','App\Http\Controllers\kecamatanController@index');
+route::get('/destroykecamatan/{id}','App\Http\Controllers\kecamatanController@destroy');
+
+Route::get('/login', function () {
+    return view('login');
 
     
-// });
+});
 

@@ -16,9 +16,7 @@
 
         <thead>
             <tr>
-                <th>id</th>
-            {{-- concat(a,b) as "ID" --}}
-            
+            <th>id</th>
             <th>nama_balita</th>
             <th>nik_ortu</th>
             <th>nama_ortu</th>

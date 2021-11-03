@@ -9,7 +9,8 @@ class kecamatanController extends Controller
 {
     public function index()
     {
-        $table_kecamatan = kecamatan::all();
+        $b = kecamatan::all();
+        return view('tableview.kecamatan',['b'=>$b]);
     }
 
     /**
@@ -75,6 +76,8 @@ class kecamatanController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $b = kecamatan::find($id);
+        $b->delete();
+        return redirect('kecamatan');
     }
 }

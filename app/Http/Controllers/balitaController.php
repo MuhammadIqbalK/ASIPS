@@ -10,7 +10,7 @@ class balitaController extends Controller
     public function index()
     {
         $a = balita::all();
-        return view('balita.balita',['a'=>$a]);
+        return view('tableview.balita',['a'=>$a]);
     }
 
     /**
