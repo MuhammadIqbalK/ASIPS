@@ -1,158 +1,109 @@
-<div class="form">
+<html lang="en">
 
-  <ul class="tab-group">
-    <li class="tab active"><a href="#signup">Sign Up</a></li>
-    <li class="tab"><a href="#login">Log In</a></li>
-  </ul>
+<head>
 
-  <div class="tab-content">
-    <div id="signup">
-      <h1>Sign Up for Free</h1>
+  <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+  <!-- Basic Page Needs
+  ================================================== -->
+  <meta charset="utf-8">
+  <title>Flat Login</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-      <form action="/" method="post">
+  <!-- Mobile Specific Metas
+  ================================================== -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-        <div class="top-row">
-          <div class="field-wrap">
-            <label>
-              First Name<span class="req">*</span>
-            </label>
-            <input type="text" required autocomplete="off" />
-          </div>
+  <!-- CSS
+    
+  ================================================== -->
 
-          <div class="field-wrap">
-            <label>
-              Last Name<span class="req">*</span>
-            </label>
-            <input type="text" required autocomplete="off" />
-          </div>
-        </div>
+  <!--[if lt IE 9]>
+		<script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+<link rel="stylesheet" type="text/css" href="login.css">
+<body>
 
-        <div class="field-wrap">
-          <label>
-            Email Address<span class="req">*</span>
-          </label>
-          <input type="email" required autocomplete="off" />
-        </div>
-
-        <div class="field-wrap">
-          <label>
-            Set A Password<span class="req">*</span>
-          </label>
-          <input type="password" required autocomplete="off" />
-        </div>
-
-        <button type="submit" class="button button-block" />Get Started</button>
-
-      </form>
-
+  <div class="container">
+    <div class="flat-form">
+      <ul class="tabs">
+        <li>
+          <a href="#login" class="active">Login</a>
+        </li>
+        <li>
+          <a href="#register">Register</a>
+        </li>
+        <li>
+          <a href="#reset">Reset Password</a>
+        </li>
+      </ul>
+      <div id="login" class="form-action show">
+        <h1>Login on webapp</h1>
+        <p>
+          Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+          Maecenas sed diam eget risus varius bladit sit amet non
+        </p>
+        <form>
+          <ul>
+            <li>
+              <input type="text" placeholder="Username" />
+            </li>
+            <li>
+              <input type="password" placeholder="Password" />
+            </li>
+            <li>
+              <input type="submit" value="Login" class="button" />
+            </li>
+          </ul>
+        </form>
+      </div>
+      <!--/#login.form-action-->
+      <div id="register" class="form-action hide">
+        <h1>Register</h1>
+        <p>
+          You should totally sign up for our super awesome service.
+          It's what all the cool kids are doing nowadays.
+        </p>
+        <form>
+          <ul>
+            <li>
+              <input type="text" placeholder="Username" />
+            </li>
+            <li>
+              <input type="password" placeholder="Password" />
+            </li>
+            <li>
+              <input type="submit" value="Sign Up" class="button" />
+            </li>
+          </ul>
+        </form>
+      </div>
+      <!--/#register.form-action-->
+      <div id="reset" class="form-action hide">
+        <h1>Reset Password</h1>
+        <p>
+          To reset your password enter your email and your birthday
+          and we'll send you a link to reset your password.
+        </p>
+        <form>
+          <ul>
+            <li>
+              <input type="text" placeholder="Email" />
+            </li>
+            <li>
+              <input type="text" placeholder="Birthday" />
+            </li>
+            <li>
+              <input type="submit" value="Send" class="button" />
+            </li>
+          </ul>
+        </form>
+      </div>
+      <!--/#register.form-action-->
     </div>
+  </div>
+  <script class="cssdeck" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+</body>
 
-    <div id="login">
-      <h1>Welcome Back!</h1>
-
-      <form action="/" method="post">
-
-        <div class="field-wrap">
-          <label>
-            Email Address<span class="req">*</span>
-          </label>
-          <input type="email" required autocomplete="off" />
-        </div>
-
-        <div class="field-wrap">
-          <label>
-            Password<span class="req">*</span>
-          </label>
-          <input type="password" required autocomplete="off" />
-        </div>
-
-        <p class="forgot"><a href="#">Forgot Password?</a></p>
-
-        <button class="button button-block" />Log In</button>
-
-      </form>
-
-    </div>
-
-  </div><!-- tab-content -->
-
-</div> <!-- /form -->
-<div class="form">
-
-  <ul class="tab-group">
-    <li class="tab active"><a href="#signup">Sign Up</a></li>
-    <li class="tab"><a href="#login">Log In</a></li>
-  </ul>
-
-  <div class="tab-content">
-    <div id="signup">
-      <h1>Sign Up for Free</h1>
-
-      <form action="/" method="post">
-
-        <div class="top-row">
-          <div class="field-wrap">
-            <label>
-              First Name<span class="req">*</span>
-            </label>
-            <input type="text" required autocomplete="off" />
-          </div>
-
-          <div class="field-wrap">
-            <label>
-              Last Name<span class="req">*</span>
-            </label>
-            <input type="text" required autocomplete="off" />
-          </div>
-        </div>
-
-        <div class="field-wrap">
-          <label>
-            Email Address<span class="req">*</span>
-          </label>
-          <input type="email" required autocomplete="off" />
-        </div>
-
-        <div class="field-wrap">
-          <label>
-            Set A Password<span class="req">*</span>
-          </label>
-          <input type="password" required autocomplete="off" />
-        </div>
-
-        <button type="submit" class="button button-block" />Get Started</button>
-
-      </form>
-
-    </div>
-
-    <div id="login">
-      <h1>Welcome Back!</h1>
-
-      <form action="/" method="post">
-
-        <div class="field-wrap">
-          <label>
-            Email Address<span class="req">*</span>
-          </label>
-          <input type="email" required autocomplete="off" />
-        </div>
-
-        <div class="field-wrap">
-          <label>
-            Password<span class="req">*</span>
-          </label>
-          <input type="password" required autocomplete="off" />
-        </div>
-
-        <p class="forgot"><a href="#">Forgot Password?</a></p>
-
-        <button class="button button-block" />Log In</button>
-
-      </form>
-
-    </div>
-
-  </div><!-- tab-content -->
-
-</div> <!-- /form -->
+</html>
