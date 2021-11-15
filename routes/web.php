@@ -27,8 +27,7 @@ route::get('/kecamatan','App\Http\Controllers\kecamatanController@index');
 route::get('/destroykecamatan/{id}','App\Http\Controllers\kecamatanController@destroy');
 
 Route::get('/login', function () {
-    return view('login');
-
-    
+    return view('login');   
 });
 
+route::get('/kecamatan','App\Http\Controllers\kecamatanController@index');
