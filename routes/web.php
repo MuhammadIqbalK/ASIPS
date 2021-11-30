@@ -18,16 +18,34 @@ Route::get('/', function () {
 
     
 });
+
+route::get('/Login','App\Http\Controllers\LoginController@index');
+Route::post('/Login','App\Http\Controllers\LoginController@authenticate');
+
+Route::get('/register', function () {
+    return view('register');   
+});
+Route::post('/register', function () {
+    return view('register');   
+});
 //tablebalita
 route::get('/balita','App\Http\Controllers\balitaController@index');
+Route::get('/balitacreate','App\Http\Controllers\balitaController@create');
+
 route::get('/destroybalita/{id}','App\Http\Controllers\balitaController@destroy');
 
 //tablekecamatan
 route::get('/kecamatan','App\Http\Controllers\kecamatanController@index');
+Route::get('/inputkecamatan','App\Http\Controllers\kecamatanController@store');
+Route::post('/kecamatancreate','App\Http\Controllers\kecamatanController@create');
+
 route::get('/destroykecamatan/{id}','App\Http\Controllers\kecamatanController@destroy');
 
-Route::get('/login', function () {
-    return view('login');   
-});
 
-route::get('/kecamatan','App\Http\Controllers\kecamatanController@index');
+
+//tablekelurahan
+route::get('/kelurahan','App\Http\Controllers\kelurahanController@index');
+Route::get('/inputkelurahan','App\Http\Controllers\kelurahanController@store');
+Route::post('/kelurahancreate','App\Http\Controllers\kelurahanController@create');
+
+route::get('/destroykelurahan/{id}','App\Http\Controllers\kelurahanController@destroy');

@@ -10,7 +10,7 @@ class kecamatanController extends Controller
     public function index()
     {
         $b = kecamatan::all();
-        return view('tableview.kecamatan',['b'=>$b]);
+        return view('table_kecamatan.kecamatan',['b'=>$b]);
     }
 
     /**
@@ -18,9 +18,19 @@ class kecamatanController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        $data = $request->input();//insert into
+      
+		
+		$b = new kecamatan();// table
+        
+        //value
+        $b->kecamatan    = $data['nama_kecamatan'];
+        $b->id    = $data['id_kecamatan'];
+		$b->save();//tombol run sqlyog
+
+        return redirect('/kecamatan');
     }
 
     /**
@@ -29,9 +39,14 @@ class kecamatanController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store()
     {
-        //
+        $table_kecamatan = kecamatan::all();
+        return view('table_kecamatan/kecamatancreate', [
+            'title' => 'Tambah Data kecamatan',
+        'table_kecamatan'=>$table_kecamatan
+            
+        ]);
     }
 
     /**

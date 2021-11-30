@@ -3,13 +3,17 @@
 namespace App\Http\Controllers;
 
 use App\Models\kelurahan;
+use App\Models\kecamatan;
 use Illuminate\Http\Request;
 
 class kelurahanController extends Controller
 {
     public function index()
+    
     {
-        //
+        // $table_kelurahan = Kelurahan::with('table_kecamatan')->get();
+        $c = kelurahan::all();
+        return view('table_kelurahan.kelurahan',['c'=>$c]);
     }
 
     /**
@@ -17,9 +21,19 @@ class kelurahanController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        $datac = $request->input();//insert into
+      
+		
+		$c = new kelurahan();// table
+        
+        //value
+        $c->kelurahan    = $datac['nama_kelurahan'];
+        $c->id_kecamatan    = $datac['id_kecamatan'];
+		$c->save();//tombol run sqlyog
+
+        return redirect('/kelurahan');
     }
 
     /**
@@ -28,9 +42,15 @@ class kelurahanController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store()
     {
-        //
+        $table_kecamatan = Kecamatan::all();
+        
+        return view('table_kelurahan/kelurahancreate', [
+            'title' => 'Tambah Data kelurahan',
+        'table_kecamatan'=>$table_kecamatan
+            
+        ]);
     }
 
     /**
@@ -73,8 +93,11 @@ class kelurahanController extends Controller
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
+   
     public function destroy($id)
     {
-        //
+        $c = kelurahan::find($id);
+        $c->delete();
+        return redirect('kelurahan');
     }
 }

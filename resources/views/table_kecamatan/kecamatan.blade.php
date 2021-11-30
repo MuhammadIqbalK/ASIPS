@@ -1,11 +1,10 @@
 @extends('layout.layout')
 
 @section('content')
-
 <main>
     <div class="container-fluid px-4">
-        <h1 class="mt-4">Table</h1>
-        <a href="{{ url('/input_data_balita') }}"><button class="btn btn-primary btn-sm" style="float: left">+ Tambah data</button></a><br><br>
+        <h1 class="mt-4">Table Kecamatan</h1>
+        <a href="{{ url('/inputkecamatan') }}"><button class="btn btn-primary btn-sm" style="float: left">Input data</button></a><br><br>
         <div class="card mb-4">
             <div class="card-header">
                 <i class="fas fa-table me-1"></i>
@@ -41,8 +40,7 @@
 </div>
 </div>
 </div>
-    
+
 </main>
-    
 @endsection
 
