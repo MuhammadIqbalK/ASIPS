@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,20 +15,25 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('Home');
+    return view('login');
+});
 
+
+
+Route::get('/Home', function () {return view('Home');
     
-});
+})->middleware('auth');
 
-route::get('/Login','App\Http\Controllers\LoginController@index');
-Route::post('/Login','App\Http\Controllers\LoginController@authenticate');
 
-Route::get('/register', function () {
-    return view('register');   
-});
-Route::post('/register', function () {
-    return view('register');   
-});
+//login
+route::get('/login','App\Http\Controllers\LoginController@index')->middleware('guest');
+Route::post('/login','App\Http\Controllers\LoginController@authenticate');
+Route::get('/logout','App\Http\Controllers\LoginController@logout');
+
+//register
+route::get('/register','App\Http\Controllers\RegisterController@index');
+Route::post('/register','App\Http\Controllers\RegisterController@store');
+
 //tablebalita
 route::get('/balita','App\Http\Controllers\balitaController@index');
 Route::get('/balitacreate','App\Http\Controllers\balitaController@create');
