@@ -70,9 +70,20 @@ class kelurahanController extends Controller
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Request $request)
     {
-        //
+        // $table_kecamatan = Kecamatan::all();
+        // $table_kelurahan = Kelurahan::find($id);
+        
+        // return view('table_kelurahan/kelurahanedit',[
+        //     'title' => 'Edit Kelurahan',
+        //     'table_kecamatan' => $table_kecamatan,
+        //     'table_kelurahan' => $table_kelurahan
+
+            $table_kecamatan = Kecamatan::all();
+            $table_kelurahan = Kelurahan::where('id',$request->id)->first();
+            return view('table_kelurahan/kelurahanedit', ['table_kecamatan'=>$table_kecamatan, 'table_kelurahan'=>$table_kelurahan
+        ]);
     }
 
     /**
@@ -84,7 +95,14 @@ class kelurahanController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $c = Kelurahan::where('id', $id);
+        $c->update([
+            'id' => $request->id,
+            'kelurahan' => $request->kelurahan,
+            'updated_at' => date("Y-m-d H:i:s")
+        ]);
+        
+        return redirect('/kelurahan');
     }
 
     /**

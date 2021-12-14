@@ -21,6 +21,7 @@
         
 
             <th>delete</th>
+            <th>update</th>
             </tr>
         </thead>
         <tbody>
@@ -31,6 +32,7 @@
            <td>{{ $datakecamatan->kecamatan}}</td>
     
             <td><a href="{{ url('/destroykecamatan',$datakecamatan->id) }}"><button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Delete</button></a>
+                <td><a href="{{ url('/kecamatanedit',$datakecamatan->id) }}"><button type="submit" class="btn btn-warning btn-sm" onclick="return confirm('Apakah Anda yakin ingin mengubah/mengedit data ini?')">Update</button></a>
 
             </tr>
             @endforeach

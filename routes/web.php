@@ -18,6 +18,10 @@ Route::get('/', function () {
     return view('landingpage.landingpage');
 });
 
+Route::get('/paduan', function () {
+    return view('home1');
+});
+
 
 
 Route::get('/Home', function () {return view('Home');
@@ -44,7 +48,8 @@ route::get('/destroybalita/{id}','App\Http\Controllers\balitaController@destroy'
 route::get('/kecamatan','App\Http\Controllers\kecamatanController@index');
 Route::get('/inputkecamatan','App\Http\Controllers\kecamatanController@store');
 Route::post('/kecamatancreate','App\Http\Controllers\kecamatanController@create');
-
+Route::get('/kecamatanedit/{id}','App\Http\Controllers\kecamatanController@edit');
+Route::post('/kecamatanupdate/{id}','App\Http\Controllers\kecamatanController@update');
 route::get('/destroykecamatan/{id}','App\Http\Controllers\kecamatanController@destroy');
 
 
@@ -53,5 +58,6 @@ route::get('/destroykecamatan/{id}','App\Http\Controllers\kecamatanController@de
 route::get('/kelurahan','App\Http\Controllers\kelurahanController@index');
 Route::get('/inputkelurahan','App\Http\Controllers\kelurahanController@store');
 Route::post('/kelurahancreate','App\Http\Controllers\kelurahanController@create');
-
+Route::get('/kelurahanedit/{id}','App\Http\Controllers\kelurahanController@edit');
+Route::post('/kelurahanupdate/{id}','App\Http\Controllers\kelurahanController@update');
 route::get('/destroykelurahan/{id}','App\Http\Controllers\kelurahanController@destroy');

@@ -68,7 +68,12 @@ class kecamatanController extends Controller
      */
     public function edit($id)
     {
-        //
+        $table_kecamatan = Kecamatan::find($id);
+        
+        return view('table_kecamatan/kecamatanedit',[
+            
+            'table_kecamatan' => $table_kecamatan
+        ]);
     }
 
     /**
@@ -80,7 +85,13 @@ class kecamatanController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $b = Kecamatan::where('id', $id);
+        $b->update([
+            'kecamatan' => $request->kecamatan,
+            'updated_at' => date("Y-m-d H:i:s")
+        ]);
+        
+        return redirect('/kecamatan');
     }
 
     /**

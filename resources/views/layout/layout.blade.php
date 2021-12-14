@@ -43,14 +43,14 @@
                 <nav class="sb-sidenav accordion sb-sidenav-8dffff" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
                         <div class="nav">
-                            <div class="sb-sidenav-menu-heading">Umum</div>
-                            <a class="nav-link" href="paduan.blade.php">
+                            <div class="sb-sidenav-menu-heading">Data master</div>
+                            <a class="nav-link" href="/kecamatan">
                                 <div class="sb-nav-link-icon"><i class="fas fa-file-alt"></i></div>
-                                Panduan
+                                tabel kecamatan
                             </a>
-                            <a class="nav-link" href="index.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-clipboard"></i></div>
-                                Registrasi
+                            <a class="nav-link" href="/kelurahan">
+                                <div class="sb-nav-link-icon"><i class="fas fa-file-alt"></i></div>
+                                tabel kelurahan
                             </a>
                             
                             <div class="sb-sidenav-menu-heading">Layanan</div>
