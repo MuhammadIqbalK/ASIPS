@@ -9,7 +9,8 @@ class posyanduController extends Controller
 {
     public function index()
     {
-        //
+        $dataposyandu = posyandu::all();
+        return view('table_posyandu.posyandu',['dataposyandu'=>$dataposyandu]);
     }
 
     /**

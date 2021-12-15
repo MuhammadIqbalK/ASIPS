@@ -9,7 +9,8 @@ class history_posyanduController extends Controller
 {
     public function index()
     {
-        //
+        $datahistory = history_posyandu::all();
+        return view('table_history_posyandu.history',['datahistory'=>$datahistory]);
     }
 
     /**

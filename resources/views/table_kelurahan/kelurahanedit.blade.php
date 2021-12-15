@@ -33,12 +33,12 @@
                         <label for="id">Id Kelurahan</label>
                         <input name="id" value="{{ $table_kelurahan->id }}">
                     </div>
-                    <div class="form-group">
+                    {{-- <div class="form-group">
                         <select name="ID_KECAMATAN" class="form-control text-center">
                             @foreach ($table_kecamatan as $item)
                                 <option value="{{ $item->id }}">{{ $item->table_kecamatan }}</option>
                             @endforeach
-                        </select>
+                        </select> --}}
                     </div>
                     <div class="form-group">
                         <input type="text" class="form-control form-control-user text-center" id="kelurahan"

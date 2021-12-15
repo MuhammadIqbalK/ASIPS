@@ -43,15 +43,7 @@
                 <nav class="sb-sidenav accordion sb-sidenav-8dffff" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
                         <div class="nav">
-                            <div class="sb-sidenav-menu-heading">Data master</div>
-                            <a class="nav-link" href="/kecamatan">
-                                <div class="sb-nav-link-icon"><i class="fas fa-file-alt"></i></div>
-                                tabel kecamatan
-                            </a>
-                            <a class="nav-link" href="/kelurahan">
-                                <div class="sb-nav-link-icon"><i class="fas fa-file-alt"></i></div>
-                                tabel kelurahan
-                            </a>
+             
                             
                             <div class="sb-sidenav-menu-heading">Layanan</div>
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
@@ -96,6 +88,39 @@
                                     </div>
                                 </nav>
                             </div>
+                          
+
+
+                            <div class="sb-sidenav-menu-heading">Data balita</div>
+                            <a class="nav-link" href="/history">
+                                <div class="sb-nav-link-icon"><i class="fas fa-file-alt"></i></div>
+                                tabel History
+                            </a>
+                            
+                         @can('admin')
+                            <div class="sb-sidenav-menu-heading">pendaftaran Balita</div>
+                            <a class="nav-link" href="/balita">
+                                <div class="sb-nav-link-icon"><i class="fas fa-file-alt"></i></div>
+                                tabel balita
+                            </a>
+                       @endcan   
+                          
+                       
+                       @can('superadmin')
+                            <div class="sb-sidenav-menu-heading">Data master</div>
+                            <a class="nav-link" href="/kecamatan">
+                                <div class="sb-nav-link-icon"><i class="fas fa-file-alt"></i></div>
+                                tabel kecamatan
+                            </a>
+                            <a class="nav-link" href="/kelurahan">
+                                <div class="sb-nav-link-icon"><i class="fas fa-file-alt"></i></div>
+                                tabel kelurahan
+                            </a>
+                            <a class="nav-link" href="/posyandu">
+                                <div class="sb-nav-link-icon"><i class="fas fa-file-alt"></i></div>
+                                tabel posyandu
+                            </a>
+                            @endcan
                             <div class="sb-sidenav-menu-heading">Addons</div>
                             <a class="nav-link" href="charts.html">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>

@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class posyandu extends Model
 {
-    protected $table = 'posyandu';
+    protected $table = 'table_posyandu';
 
     public function kelurahan(){
         return $this->belongsTo(kelurahan::class, 'id', 'id_kelurahan');

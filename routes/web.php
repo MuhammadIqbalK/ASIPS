@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\kelurahanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,9 +25,7 @@ Route::get('/paduan', function () {
 
 
 
-Route::get('/Home', function () {return view('Home');
-    
-})->middleware('auth');
+Route::get('/Home', function () {return view('Home');})->middleware('auth');
 
 
 //login
@@ -38,14 +37,9 @@ Route::get('/logout','App\Http\Controllers\LoginController@logout');
 route::get('/register','App\Http\Controllers\RegisterController@index');
 Route::post('/register','App\Http\Controllers\RegisterController@store');
 
-//tablebalita
-route::get('/balita','App\Http\Controllers\balitaController@index');
-Route::get('/balitacreate','App\Http\Controllers\balitaController@create');
-
-route::get('/destroybalita/{id}','App\Http\Controllers\balitaController@destroy');
 
 //tablekecamatan
-route::get('/kecamatan','App\Http\Controllers\kecamatanController@index');
+route::get('/kecamatan','App\Http\Controllers\kecamatanController@index')->middleware('sadmin');
 Route::get('/inputkecamatan','App\Http\Controllers\kecamatanController@store');
 Route::post('/kecamatancreate','App\Http\Controllers\kecamatanController@create');
 Route::get('/kecamatanedit/{id}','App\Http\Controllers\kecamatanController@edit');
@@ -53,11 +47,47 @@ Route::post('/kecamatanupdate/{id}','App\Http\Controllers\kecamatanController@up
 route::get('/destroykecamatan/{id}','App\Http\Controllers\kecamatanController@destroy');
 
 
-
 //tablekelurahan
-route::get('/kelurahan','App\Http\Controllers\kelurahanController@index');
+route::get('/kelurahan','App\Http\Controllers\kelurahanController@index')->middleware('sadmin');
 Route::get('/inputkelurahan','App\Http\Controllers\kelurahanController@store');
 Route::post('/kelurahancreate','App\Http\Controllers\kelurahanController@create');
 Route::get('/kelurahanedit/{id}','App\Http\Controllers\kelurahanController@edit');
 Route::post('/kelurahanupdate/{id}','App\Http\Controllers\kelurahanController@update');
 route::get('/destroykelurahan/{id}','App\Http\Controllers\kelurahanController@destroy');
+
+//tableposyandu
+route::get('/posyandu','App\Http\Controllers\posyanduController@index')->middleware('sadmin');
+Route::get('/inputbalita','App\Http\Controllers\balitaController@store');
+Route::get('/balitacreate','App\Http\Controllers\balitaController@create');
+Route::get('/balitaedit/{id}','App\Http\Controllers\balitaController@edit');
+Route::post('/balitaupdate/{id}','App\Http\Controllers\balitaController@update');
+route::get('/destroybalita/{id}','App\Http\Controllers\balitaController@destroy');
+
+
+//tablerole
+route::get('/balita','App\Http\Controllers\balitaController@index')->middleware('sadmin');
+Route::get('/inputbalita','App\Http\Controllers\balitaController@store');
+Route::get('/balitacreate','App\Http\Controllers\balitaController@create');
+Route::get('/balitaedit/{id}','App\Http\Controllers\balitaController@edit');
+Route::post('/balitaupdate/{id}','App\Http\Controllers\balitaController@update');
+route::get('/destroybalita/{id}','App\Http\Controllers\balitaController@destroy');
+
+
+
+//tablebalita
+route::get('/balita','App\Http\Controllers\balitaController@index');
+Route::get('/inputbalita','App\Http\Controllers\balitaController@store');
+Route::get('/balitacreate','App\Http\Controllers\balitaController@create');
+Route::get('/balitaedit/{id}','App\Http\Controllers\balitaController@edit');
+Route::post('/balitaupdate/{id}','App\Http\Controllers\balitaController@update');
+route::get('/destroybalita/{id}','App\Http\Controllers\balitaController@destroy');
+
+
+//tablehistory
+route::get('/history','App\Http\Controllers\history_posyanduController@index');
+Route::get('/inputbalita','App\Http\Controllers\balitaController@store');
+Route::get('/balitacreate','App\Http\Controllers\balitaController@create');
+Route::get('/balitaedit/{id}','App\Http\Controllers\balitaController@edit');
+Route::post('/balitaupdate/{id}','App\Http\Controllers\balitaController@update');
+route::get('/destroybalita/{id}','App\Http\Controllers\balitaController@destroy');
+
