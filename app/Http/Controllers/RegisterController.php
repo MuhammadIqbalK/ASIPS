@@ -22,21 +22,23 @@ class RegisterController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-   
+
     public function store(Request $request)
     {
         $validatedData = $request->validate([
 
             'name' => 'required|min:5|max:25',
+            'nik'  => 'required|unique:users',
             'email' => 'required|email:dns|unique:users',
             'password' => 'required|min:6|max:255'
         ]);
+        $validatedData['role'] = $request->role;
         $validatedData['password'] = Hash::make($validatedData['password']);
-            users::create($validatedData);
-         
-            return redirect('/login')->with('success', 'Registration successsfull!! Please Login');
+        users::create($validatedData);
+
+        return redirect('/login')->with('success', 'Registration successsfull!! Please Login');
     }
- }
+}
 //     /**
 //      * Display the specified resource.
 //      *
