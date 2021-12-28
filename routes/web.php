@@ -78,19 +78,3 @@ Route::get('/history/{id}/edit', [history_posyanduController::class, 'edit'])->m
 Route::patch('/history/{id}', [history_posyanduController::class, 'update'])->middleware('admin');
 Route::delete('/history/{id}', [history_posyanduController::class, 'destroy'])->middleware('admin');
 
-//tablerole
-// route::get('/balita', 'App\Http\Controllers\balitaController@index');
-// Route::get('/inputbalita', 'App\Http\Controllers\balitaController@store');
-// Route::get('/balitacreate', 'App\Http\Controllers\balitaController@create');
-// Route::get('/balitaedit/{id}', 'App\Http\Controllers\balitaController@edit');
-// Route::post('/balitaupdate/{id}', 'App\Http\Controllers\balitaController@update');
-// route::get('/destroybalita/{id}', 'App\Http\Controllers\balitaController@destroy');
-
-
-//tablehistory
-// route::get('/history', 'App\Http\Controllers\history_posyanduController@index');
-// Route::get('/inputbalita', 'App\Http\Controllers\balitaController@store');
-// Route::get('/balitacreate', 'App\Http\Controllers\balitaController@create');
-// Route::get('/balitaedit/{id}', 'App\Http\Controllers\balitaController@edit');
-// Route::post('/balitaupdate/{id}', 'App\Http\Controllers\balitaController@update');
-// route::get('/destroybalita/{id}', 'App\Http\Controllers\balitaController@destroy');
